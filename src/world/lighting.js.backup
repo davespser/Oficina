@@ -1,0 +1,22 @@
+import * as THREE from 'three';
+
+export function createLighting(scene) {
+  const ambientLight = new THREE.HemisphereLight(
+    0x9fcfff,
+    0x10152f,
+    1.8
+  );
+
+  const keyLight = new THREE.DirectionalLight(0xffffff, 3.2);
+  keyLight.position.set(4, 8, 5);
+
+  const blueLight = new THREE.PointLight(0x168cff, 35, 24);
+  blueLight.position.set(-4, 3, 1);
+
+  const goldLight = new THREE.PointLight(0xffbd58, 24, 20);
+  goldLight.position.set(4, 2, -3);
+
+  scene.add(ambientLight, keyLight, blueLight, goldLight);
+
+  return { ambientLight, keyLight, blueLight, goldLight };
+}

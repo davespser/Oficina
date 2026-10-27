@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0",
+    "catalogo:dibujos": "node scripts/generate-drawings-manifest.mjs",
+    "predev": "npm run catalogo:dibujos",
+    "prebuild": "npm run catalogo:dibujos"
   },
   "repository": {
     "type": "git",
