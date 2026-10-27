@@ -1,0 +1,27 @@
+{
+  "name": "oficina",
+  "version": "1.0.0",
+  "description": "Espacio creativo personal desarrollado desde Android con UserLAnd, Node.js, Three.js y TSL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davespser/Oficina.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davespser/Oficina/issues"
+  },
+  "homepage": "https://github.com/davespser/Oficina#readme",
+  "type": "module",
+  "devDependencies": {
+    "vite": "6.4.5"
+  }
+}
