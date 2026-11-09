@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite --host 0.0.0.0",
+    "dev": "concurrently -k \"node server/index.js\" \"vite --host 0.0.0.0\"",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
     "catalogo:dibujos": "node scripts/generate-drawings-manifest.mjs",
-    "predev": "npm run catalogo:dibujos",
-    "prebuild": "npm run catalogo:dibujos"
+    "predev": "npm run catalogos",
+    "prebuild": "npm run catalogos",
+    "catalogo:musica": "node scripts/generate-music-manifest.mjs",
+    "catalogos": "npm run catalogo:dibujos && npm run catalogo:musica"
   },
   "repository": {
     "type": "git",
@@ -25,9 +27,12 @@
   "homepage": "https://github.com/davespser/Oficina#readme",
   "type": "module",
   "devDependencies": {
+    "concurrently": "^10.0.7",
     "vite": "6.4.5"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "express": "^5.3.0",
     "three": "0.186.1"
   }
 }

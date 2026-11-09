@@ -80,7 +80,7 @@ function createStoneMaterial() {
   return mat;
 }
 
-export function createRoom(scene) {
+export function createRoom(scene, { deferMandalaTextures = false } = {}) {
   const radius = 10;
   const vertices = [];
 
@@ -166,6 +166,49 @@ export function createRoom(scene) {
   platform.position.y = 0.09;
   scene.add(platform);
 
+  // La plataforma aparece enseguida; las texturas PBR se pueden asociar después.
+  const mandalaMaterial = new THREE.MeshStandardMaterial({
+    color: deferMandalaTextures ? 0x8c7568 : 0xffffff,
+    normalScale: new THREE.Vector2(0.35, 0.35),
+    metalness: 0.08,
+    roughness: 0.78
+  });
+
+  const mandala = new THREE.Mesh(
+    new THREE.CircleGeometry(1.42, 128),
+    mandalaMaterial
+  );
+
+  mandala.rotation.x = -Math.PI / 2;
+  mandala.position.y = 0.153;
+  scene.add(mandala);
+
+  function loadMandalaTextures() {
+    const mandalaLoader = new THREE.TextureLoader();
+    const albedo = mandalaLoader.load(
+      '/assets/materials-pbr/65922__Png_albedo.png',
+      (texture) => {
+        texture.colorSpace = THREE.SRGBColorSpace;
+        texture.anisotropy = 8;
+        mandalaMaterial.map = texture;
+        mandalaMaterial.color.set(0xffffff);
+        mandalaMaterial.needsUpdate = true;
+      }
+    );
+    const normal = mandalaLoader.load(
+      '/assets/materials-pbr/65922__Png_normal.png',
+      (texture) => {
+        texture.anisotropy = 8;
+        mandalaMaterial.normalMap = texture;
+        mandalaMaterial.needsUpdate = true;
+      }
+    );
+
+    return { albedo, normal };
+  }
+
+  if (!deferMandalaTextures) loadMandalaTextures();
+
   const coreMaterial = new THREE.MeshBasicMaterial({
     color: 0x8cecff,
     toneMapped: false
@@ -200,5 +243,12 @@ export function createRoom(scene) {
   platformLight.position.set(0, 0.42, 0);
   scene.add(platformLight);
 
-  return { vertices, platform, platformRing, platformHalo, platformLight };
+  return {
+    vertices,
+    platform,
+    platformRing,
+    platformHalo,
+    platformLight,
+    loadMandalaTextures
+  };
 }

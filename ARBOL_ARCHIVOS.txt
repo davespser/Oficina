@@ -1,0 +1,127 @@
+Oficina/
+├── .config/
+│   └── cloudflare.env
+├── .git/ [contenido omitido, 45 MB]
+├── dist/ [contenido omitido, 47 MB]
+├── node_modules/ [contenido omitido, 95 MB]
+├── public/
+│   ├── assets/
+│   │   ├── materials-pbr/
+│   │   │   ├── .gitkeep
+│   │   │   ├── 65922__Png_albedo.png
+│   │   │   ├── 65922__Png_ao.png
+│   │   │   ├── 65922__Png_normal.png
+│   │   │   ├── pbr-texture-base-color.png.jpg
+│   │   │   ├── pbr-texture-normal.png.jpg
+│   │   │   └── pbr-texture-roughness.png.jpg
+│   │   ├── models/
+│   │   │   └── .gitkeep
+│   │   └── music/
+│   │       ├── .gitkeep
+│   │       ├── A través del micrófono - usesuno.com.mp3
+│   │       ├── El Mundo Pesa Más - usesuno.com.m4a
+│   │       └── manifest.json
+│   ├── dibujos/
+│   │   ├── 1792604392567.jpg
+│   │   ├── file_0000000019c0820ab44ad27289384f56.png
+│   │   ├── file_0000000036f88243b02f3e689c0e50b5.png
+│   │   ├── file_000000006c9881f4ab226b6d682a946b.png
+│   │   ├── file_00000000744082468f5a8416f7862ce3.png
+│   │   ├── file_00000000778c8246b00599b79765872c.png
+│   │   ├── file_00000000934081f48f6d11bbeb8c8e8b.png
+│   │   ├── file_00000000bb2881f4add4c9ee98de1e3f.png
+│   │   ├── file_00000000d17c820abd9594b777ec38f1.png
+│   │   ├── file_00000000fab881f4b791f90378254154.png
+│   │   ├── lux-1794165035772-8569caff.jpg
+│   │   ├── lux-1794165821413-206593b1.jpg
+│   │   └── manifest.json
+│   └── imagenes/
+├── scripts/
+│   ├── codex-test.js
+│   ├── generate-drawings-manifest.mjs
+│   └── generate-music-manifest.mjs
+├── server/
+│   ├── chat-history.json
+│   ├── cloudflare-image.js
+│   ├── cloudflare-image.js.bak
+│   ├── codex.js
+│   ├── codex.js.bak
+│   ├── codex.js.bak-2026-11-09T06-32-17-404Z
+│   ├── codex.js.bak-antes-cierre
+│   ├── codex.js.bak-recuperacion-hilos
+│   ├── conversation-store.js
+│   ├── conversations.json
+│   ├── flux-mcp.js
+│   ├── index.js
+│   ├── index.js.bak
+│   ├── index.js.bak-2026-11-09T06-32-17-404Z
+│   ├── thread.json
+│   └── work-memory.json
+├── src/
+│   ├── objects/
+│   │   ├── buttons.js
+│   │   ├── buttons.js.bak-20261108-143129
+│   │   ├── buttons.js.bak-20261108-152017
+│   │   ├── buttons.js.bak-cristal
+│   │   └── buttons.js.bak-line-loop-fix-20261109
+│   ├── ui/
+│   │   ├── interface.js
+│   │   ├── panels.js
+│   │   ├── panels.js.bak
+│   │   ├── panels.js.bak-20261108-143129
+│   │   ├── panels.js.bak-20261108-152017
+│   │   ├── panels.js.bak-musica-20261028-230956
+│   │   └── panels.js.bak-reproductor-persistente-20261028-232711
+│   ├── world/
+│   │   ├── room/
+│   │   │   ├── columns.js
+│   │   │   ├── curtains.js
+│   │   │   ├── floor.js
+│   │   │   ├── floor.js.bak-20261028-222450
+│   │   │   ├── floor.js.bak-placeholder
+│   │   │   ├── floor.js.bak-reflejos-20261028-224900
+│   │   │   ├── floor.js.bak-texturas-final
+│   │   │   ├── floor.js.bak-webgpu
+│   │   │   ├── stoneGeometry.js
+│   │   │   ├── trim.js
+│   │   │   ├── trim.js.bak-20261028-193822
+│   │   │   └── windows.js
+│   │   ├── landscape.js
+│   │   ├── landscape.js.bak-antes-ajuste
+│   │   ├── landscape.js.bak-horizonte
+│   │   ├── landscape.js.bak-organico
+│   │   ├── lighting.js
+│   │   ├── room.js
+│   │   ├── room.js.bak-20261028-193822
+│   │   ├── room.js.bak-mandala-20261028-223751
+│   │   ├── room.js.bak-reflejos-20261028-224900
+│   │   ├── room.js.bak-startup-20261109-085828
+│   │   ├── room.js.before-curtains-20261028-192019
+│   │   ├── room.js.before-floor-20261028-193224
+│   │   ├── room.js.before-trim-20261028-192535
+│   │   ├── room.js.before-windows-20261028-192947
+│   │   ├── room.js.pre-expansion
+│   │   ├── sky.js
+│   │   └── volumetricCloud.js
+│   ├── main.js
+│   ├── main.js.bak-antes-bloom
+│   ├── main.js.bak-diagnostico
+│   ├── main.js.bak-monitor
+│   ├── main.js.bak-prueba-render
+│   └── main.js.bak-startup-20261109-085828
+├── .gitignore
+├── A través del micrófono - usesuno.com.mp3
+├── ARBOL_ARCHIVOS.txt
+├── CODEX_PRUEBA.md
+├── El Mundo Pesa Más - usesuno.com.m4a
+├── index.html
+├── index.html.bak-startup-20261109-085828
+├── package-lock.json
+├── package.json
+├── package.json.bak-musica-20261028-230956
+├── README.md
+├── vite.config.js
+└── vite.config.js.bak-chat
+
+Resumen: 18 carpetas y 105 archivos listados.
+Se omite el contenido de node_modules, dist y .git para mantener el árbol legible.

@@ -4,10 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Oficina Virtual 3D</title>
+  <style>
+    html, body { width: 100%; height: 100%; margin: 0; }
+    body { overflow: hidden; background: #030611; color: #d9efff; font-family: system-ui, sans-serif; }
+    #boot-screen {
+      position: fixed; inset: 0; display: grid; place-content: center; gap: 14px;
+      z-index: 3; text-align: center; background: radial-gradient(ellipse at 50% 45%, #10213a, #030611 68%);
+    }
+    #boot-screen[hidden] { display: none; }
+    #boot-screen h1 { margin: 0; color: #d9efff; font: 600 1.1rem monospace; letter-spacing: .12em; }
+    #boot-screen p { margin: 0; color: #83cfff; font-size: .9rem; }
+    #boot-screen::before {
+      content: ''; width: 34px; height: 34px; justify-self: center; border-radius: 50%;
+      border: 2px solid #1765a0; border-top-color: #83cfff; animation: boot-spin .9s linear infinite;
+    }
+    @keyframes boot-spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { #boot-screen::before { animation: none; } }
+  </style>
 </head>
 <body>
-  <h1>Mi Oficina Virtual 3D</h1>
-  <p>Preparando el motor gráfico...</p>
+  <main id="boot-screen" role="status" aria-live="polite">
+    <h1>OFICINA VIRTUAL</h1>
+    <p>Preparando el espacio…</p>
+  </main>
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>
