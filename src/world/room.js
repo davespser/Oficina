@@ -186,7 +186,7 @@ export function createRoom(scene, { deferMandalaTextures = false } = {}) {
   function loadMandalaTextures() {
     const mandalaLoader = new THREE.TextureLoader();
     const albedo = mandalaLoader.load(
-      '/assets/materials-pbr/65922__Png_albedo.png',
+      import.meta.env.BASE_URL + 'assets/materials-pbr/65922__Png_albedo.png',
       (texture) => {
         texture.colorSpace = THREE.SRGBColorSpace;
         texture.anisotropy = 8;
@@ -196,7 +196,7 @@ export function createRoom(scene, { deferMandalaTextures = false } = {}) {
       }
     );
     const normal = mandalaLoader.load(
-      '/assets/materials-pbr/65922__Png_normal.png',
+      import.meta.env.BASE_URL + 'assets/materials-pbr/65922__Png_normal.png',
       (texture) => {
         texture.anisotropy = 8;
         mandalaMaterial.normalMap = texture;

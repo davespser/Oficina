@@ -56,16 +56,16 @@ export function createRoomFloor(scene, vertices, inset) {
   }
 
   loadTexture(
-    '/assets/materials-pbr/pbr-texture-base-color.png.jpg',
+    import.meta.env.BASE_URL + 'assets/materials-pbr/pbr-texture-base-color.png.jpg',
     'map',
     THREE.SRGBColorSpace
   );
   loadTexture(
-    '/assets/materials-pbr/pbr-texture-normal.png.jpg',
+    import.meta.env.BASE_URL + 'assets/materials-pbr/pbr-texture-normal.png.jpg',
     'normalMap'
   );
   loadTexture(
-    '/assets/materials-pbr/pbr-texture-roughness.png.jpg',
+    import.meta.env.BASE_URL + 'assets/materials-pbr/pbr-texture-roughness.png.jpg',
     'roughnessMap'
   );
 

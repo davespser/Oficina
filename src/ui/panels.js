@@ -115,7 +115,7 @@ export function createContentPanel() {
 
     filenameLabel.textContent = filename;
     largeImage.alt = filename;
-    largeImage.src = '/dibujos/' + encodeURIComponent(filename);
+    largeImage.src = import.meta.env.BASE_URL + 'dibujos/' + encodeURIComponent(filename);
   }
 
   function openViewer(filename) {
@@ -577,7 +577,7 @@ export function createContentPanel() {
     showMessage('Cargando catálogo de imágenes…');
 
     try {
-      const response = await fetch('/dibujos/manifest.json', {
+      const response = await fetch(import.meta.env.BASE_URL + 'dibujos/manifest.json', {
         cache: 'no-store'
       });
 
@@ -619,7 +619,7 @@ export function createContentPanel() {
           'border-radius:10px;background:#0b1423;cursor:pointer';
 
         const image = document.createElement('img');
-        image.src = '/dibujos/' + encodeURIComponent(filename);
+        image.src = import.meta.env.BASE_URL + 'dibujos/' + encodeURIComponent(filename);
         image.alt = filename;
         image.loading = 'lazy';
         image.style.cssText =
@@ -761,7 +761,7 @@ export function createContentPanel() {
     musicIndex = (index + musicTracks.length) % musicTracks.length;
     const filename = musicTracks[musicIndex];
 
-    musicAudio.src = '/assets/music/' + encodeURIComponent(filename);
+    musicAudio.src = import.meta.env.BASE_URL + 'assets/music/' + encodeURIComponent(filename);
     musicAudio.load();
     updateMusicTrackLabel();
     updateMusicStatus('Pista seleccionada');
@@ -783,7 +783,7 @@ export function createContentPanel() {
     showMessage('Cargando catálogo musical…');
 
     try {
-      const response = await fetch('/assets/music/manifest.json', {
+      const response = await fetch(import.meta.env.BASE_URL + 'assets/music/manifest.json', {
         cache: 'no-store'
       });
 
